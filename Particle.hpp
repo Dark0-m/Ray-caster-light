@@ -6,9 +6,9 @@ public:
     Particle(sf::Vector2f window_size) {
         pos = window_size / 2.f;
 
-        for (int a = 0; a < 360; a += 10) {
+        for (int a = 0; a < 360; a++) {
             float angleRadians = a * (3.14159265359f / 180.f);
-            rays.emplace_back(pos, angleRadians);
+            rays.push_back(Ray(pos, angleRadians));
         }
     }
 
@@ -40,9 +40,10 @@ public:
             if (closest != sf::Vector2f(-1, -1)) {
                 sf::Vertex line[2];
                 line[0].position = pos;
-                line[0].color = sf::Color::White;
                 line[1].position = closest;
-                line[1].color = sf::Color::White;
+                
+                line[0].color = sf::Color(255, 255, 255, 128);
+                line[1].color = sf::Color(255, 255, 255, 128);
 
                 window.draw(line, 2, sf::Lines);
             }
@@ -50,8 +51,8 @@ public:
     }
 
     void draw(sf::RenderWindow& window) {
-        sf::CircleShape circle(7.f);
-        circle.setOrigin(7.f, 7.f);
+        sf::CircleShape circle(15.f);
+        circle.setOrigin(15.f, 15.f);
         circle.setPosition(pos);
         circle.setFillColor(sf::Color::White);
 
