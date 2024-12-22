@@ -20,6 +20,9 @@ public:
         line[0].position = pos;
         line[1].position.x = pos.x + cos(angle) * 10.f;
         line[1].position.y = pos.y + sin(angle) * 10.f;
+
+        line[0].color = sf::Color(255, 255, 255, 128);
+        line[1].color = sf::Color(255, 255, 255, 128);
     }
 
     void lookAt(sf::Vector2f a) {
