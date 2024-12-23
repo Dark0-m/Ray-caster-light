@@ -42,8 +42,8 @@ public:
                 line[0].position = pos;
                 line[1].position = closest;
                 
-                line[0].color = sf::Color(255, 255, 255, 128);
-                line[1].color = sf::Color(255, 255, 255, 128);
+                line[0].color = sf::Color(255, 0, 0, 128);
+                line[1].color = sf::Color(255, 0, 0, 128);
 
                 window.draw(line, 2, sf::Lines);
             }
