@@ -24,10 +24,10 @@ int main()
     sf::Event event;
 
     std::vector<Boundary> walls;
-    walls.push_back(Boundary(sf::Vector2f(0, 0), sf::Vector2f(700, 0), sf::Color::White));
-    walls.push_back(Boundary(sf::Vector2f(0, 0), sf::Vector2f(0, 600), sf::Color::White));
-    walls.push_back(Boundary(sf::Vector2f(0, 600), sf::Vector2f(700, 600), sf::Color::White));
-    walls.push_back(Boundary(sf::Vector2f(700, 600), sf::Vector2f(700, 0), sf::Color::White));
+    walls.push_back(Boundary(sf::Vector2f(1, 2), sf::Vector2f(700, 2), sf::Color::White));
+    walls.push_back(Boundary(sf::Vector2f(0, 0), sf::Vector2f(1, 600), sf::Color::White));
+    walls.push_back(Boundary(sf::Vector2f(1, 600), sf::Vector2f(700, 599), sf::Color::White));
+    walls.push_back(Boundary(sf::Vector2f(700, 599), sf::Vector2f(700, 1), sf::Color::White));
 
     srand(time(0));
     
